@@ -1,8 +1,7 @@
 {
+  "$schema": "../../../node_modules/limina/schemas/tsconfig-schema.json",
   "extends": "@pnpm/tsconfig",
   "compilerOptions": {
-    "outDir": "lib",
-    "rootDir": "src",
     "lib": [
       "ESNext.Disposable"
     ]
@@ -11,9 +10,10 @@
     "src/**/*.ts",
     "../../__typings__/**/*.d.ts"
   ],
-  "references": [
-    {
-      "path": "../prepare"
+  "liminaOptions": {
+    "outputs": {
+      "outDir": "lib",
+      "rootDir": "src"
     }
-  ]
+  }
 }

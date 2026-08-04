@@ -1,13 +1,15 @@
 {
+  "$schema": "../../../node_modules/limina/schemas/tsconfig-schema.json",
   "extends": "@pnpm/tsconfig",
-  "compilerOptions": {
-    "outDir": "lib",
-    "rootDir": "src",
-    "target": "es2020"
-  },
   "include": [
     "src/**/*.ts",
     "../../__typings__/**/*.d.ts"
   ],
-  "references": []
+  "liminaOptions": {
+    "outputs": {
+      "outDir": "lib",
+      "rootDir": "src",
+      "target": "es2020"
+    }
+  }
 }

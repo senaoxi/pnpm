@@ -1,25 +1,14 @@
 {
+  "$schema": "../../../node_modules/limina/schemas/tsconfig-schema.json",
   "extends": "@pnpm/tsconfig",
-  "compilerOptions": {
-    "outDir": "lib",
-    "rootDir": "src"
-  },
   "include": [
     "src/**/*.ts",
     "../../__typings__/**/*.d.ts"
   ],
-  "references": [
-    {
-      "path": "../../__utils__/prepare"
-    },
-    {
-      "path": "../../__utils__/test-fixtures"
-    },
-    {
-      "path": "../../core/error"
-    },
-    {
-      "path": "../../core/logger"
+  "liminaOptions": {
+    "outputs": {
+      "outDir": "lib",
+      "rootDir": "src"
     }
-  ]
+  }
 }

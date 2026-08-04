@@ -1,33 +1,18 @@
 {
+  "$schema": "../../../../node_modules/limina/schemas/tsconfig-schema.json",
   "extends": "@pnpm/tsconfig",
   "compilerOptions": {
     "moduleResolution": "node16",
-    "module": "Node16",
-    "outDir": "lib",
-    "rootDir": "src"
+    "module": "Node16"
   },
   "include": [
     "src/**/*.ts",
     "../../../__typings__/**/*.d.ts"
   ],
-  "references": [
-    {
-      "path": "../../../__utils__/test-fixtures"
-    },
-    {
-      "path": "../../../core/error"
-    },
-    {
-      "path": "../../../core/types"
-    },
-    {
-      "path": "../../../deps/path"
-    },
-    {
-      "path": "../../../lockfile/fs"
-    },
-    {
-      "path": "../../../lockfile/utils"
+  "liminaOptions": {
+    "outputs": {
+      "outDir": "lib",
+      "rootDir": "src"
     }
-  ]
+  }
 }

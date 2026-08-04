@@ -1,19 +1,14 @@
 {
+  "$schema": "../../../node_modules/limina/schemas/tsconfig-schema.json",
   "extends": "@pnpm/tsconfig",
-  "compilerOptions": {
-    "outDir": "lib",
-    "rootDir": "src"
-  },
   "include": [
     "src/**/*.ts",
     "../../__typings__/**/*.d.ts"
   ],
-  "references": [
-    {
-      "path": "../../core/error"
-    },
-    {
-      "path": "../../resolving/git-resolver"
+  "liminaOptions": {
+    "outputs": {
+      "outDir": "lib",
+      "rootDir": "src"
     }
-  ]
+  }
 }
