@@ -2,6 +2,7 @@
   "name": "monorepo-root",
   "private": true,
   "scripts": {
+    "check": "limina check",
     "bump": "node pnpm11/__utils__/scripts/src/bump.ts",
     "prepare": "husky",
     "pretest": "pn compile-only && pn prepare-fixtures",
@@ -31,7 +32,8 @@
     "check:node-release-keys": "node pnpm11/crypto/shasums-file/scripts/update-node-release-keys.mjs",
     "update:node-release-keys": "node pnpm11/crypto/shasums-file/scripts/update-node-release-keys.mjs --update",
     "release": "pn --filter=@pnpm/exe run build-artifacts && pn --filter=@pnpm/exe publish --tag=next-11 --access=public --provenance && pn publish --filter=!pnpm --filter=!@pnpm/exe --access=public --provenance && pn publish --filter=pnpm --tag=next-11 --access=public --provenance",
-    "dev-setup": "pn -C=./pnpm11/pnpm/dev link -g"
+    "dev-setup": "pn -C=./pnpm11/pnpm/dev link -g",
+    "limina:build": "limina checker build"
   },
   "devDependencies": {
     "@commitlint/cli": "catalog:",
@@ -55,6 +57,7 @@
     "jest": "catalog:",
     "keyv": "catalog:",
     "lcov-result-merger": "catalog:",
+    "limina": "catalog:",
     "rimraf": "catalog:",
     "shx": "catalog:",
     "typescript": "catalog:"

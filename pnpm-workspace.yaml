@@ -385,6 +385,7 @@ catalog:
   write-yaml-file: ^6.0.0
   yaml: ^2.9.0
   yaml-tag: 1.1.0
+  limina: 0.2.3
 
 catalogMode: strict
 
@@ -456,7 +457,7 @@ minimumReleaseAgeExclude:
   - tmp@0.2.6
   - http-proxy-middleware@3.0.7
 
-nodeVersion: 22.13.0
+nodeVersion: 22.18.0
 
 optimisticRepeatInstall: true
 
